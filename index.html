@@ -26,12 +26,13 @@
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="StockRip">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDY0IDY0Ij48cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIGZpbGw9IiMyOTQ0MEYiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS45MjAgMTMuNjAwKSBzY2FsZSgwLjE2MDAwKSIgZmlsbD0iI0E2RjM1NyI+PHJlY3QgeD0iNTIiIHk9IjAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIzMCIvPjxyZWN0IHg9IjUyIiB5PSIyMDAiIHdpZHRoPSIyMiIgaGVpZ2h0PSIzMCIvPjxwYXRoIGQ9Ik0wIDE0MVYzOEExMCAxMCAwIDAgMSAxMCAyOEgxMTZBMTAgMTAgMCAwIDEgMTI2IDM4VjYyTDY4IDEyMUw0NiAxMDFaIi8+PHBhdGggZD0iTTAgMTY5TDQ1IDEyOUw2OCAxNTBMMTI2IDkwVjE5MkExMCAxMCAwIDAgMSAxMTYgMjAySDEwQTEwIDEwIDAgMCAxIDAgMTkyWiIvPjwvZz48L3N2Zz4=">
 <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAABqUlEQVR4nOyWzUsCQRjGZ2Y/LFP6EBGNlIIOoodIwi4ZRFRE3Q2CQKIueuzmIQ9BVJcICqKrl6Kof8EgDwllHoIgiw6BqNUho7LdaQyDgpzZVUQCH5a5vPP+ntl339kZ3j7cDKopHlRZdYP/ZmC06siYvntWnoKAGnmDveRRlVL1EkHGRoMgsOVpMWn/DGbvc5v+Y4BpAEaJBA1Xik5ksDQJIoPAKBGWacuTC6Kun2kAEaTQ95bPpHxlBhT6wVr86jTNnKmuTb/pmNAvoyn3pE3QoMoMcLECT6mXnYWTm0QGY3y0fkHorrGOEZ8dsMT6yF/8ZDyzv3r+mvsIL8ZsjrbbxEPPUPv4vAMoELtE0cNkOBTTaHnfSj/pS0J3eswTfidQJs7Y1UAJyxJOxrOmTv3Mkttg0TkHzLyIRmftEBa7K7J7TW9ldhdZHa1TQZfYUJjZqBcHvd0/owgBiZrOMOAEOB3q47iSlcSMbcAyQByi0IkgBAwCPZx/kx5TuVJR8rPLv8uAKqjq2hLY9pBxYy6iPKXm58FvlXFkqnsDVehyDMpQ3aD2Bp8AAAD//+geoQEAAAAGSURBVAMAh/GEXE/YvJsAAAAASUVORK5CYII=">
 <link rel="icon" type="image/png" sizes="192x192" href="data:image/png;base64,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">
 <link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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">
 <style>html,body{margin:0;background:#050506}x-dc{display:none}</style>
-<script src="sr-data.js?v=3845d7404b"></script>
+<script src="sr-data.js?v=faa00b7bc9"></script>
 <script>
 (function () {
   var A = window.__SR.assets;
@@ -65,60 +66,13 @@ body{background:#050506}
 .m-root:not(.full):not(.doc) .m-fade{top:auto;bottom:0}
 .pr-doc{position:relative;background:#050506;overflow-x:clip;touch-action:pan-y}
 .pr-docwrap{width:390px;overflow-x:clip}
-.pr-fixed{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;touch-action:manipulation}
-.pr-fixed.pr-wide{background:#ffffff}
-.pr-fixed.pr-phone{background:#050506}
+.pr-fixed{position:fixed;left:0;top:0;right:0;bottom:0;overflow:hidden;touch-action:manipulation;background:#050506}
 /* Home screen web app: lay out for the real screen, not the viewport iOS reports (it can be a status bar short) */
 .sr-pwa .pr-fixed{position:absolute;bottom:auto;height:var(--sr-vh,100%)}
-.sr-pwa .pr-panelwrap{bottom:auto;height:var(--sr-vh,100%)}
 html.sr-lock,html.sr-lock body{overflow:hidden;height:var(--sr-vh,100%)}
 .pr-stage{position:absolute;overflow:hidden}
-.pr-wide .pr-stage{background:#000000;box-shadow:0 0 0 1px #c8c8c8}
+.pr-wide .pr-stage{background:#000000;box-shadow:0 0 0 1px rgba(255,255,255,.14),0 30px 80px rgba(0,0,0,.6)}
 .pr-screen{position:absolute;left:0;top:0;width:390px;transform-origin:0 0;overflow:hidden;background:#050506}
-.pr-ui,.pr-ui button{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-.pr-ui{color:#000000}
-.pr-ui button{cursor:pointer}
-.pr-pill{position:fixed;z-index:1000;display:flex;align-items:center;gap:6px;height:32px;padding:0 14px;border:0;border-radius:999px;background:#ffffff;color:#000000;font-size:13px;font-weight:600;box-shadow:0 1px 6px rgba(0,0,0,.45)}
-.pr-pill.top{left:50%;top:calc(env(safe-area-inset-top,0px) + 6px);transform:translateX(-50%);height:28px;padding:0 12px;font-size:12px}
-.pr-pill.side{left:16px;top:calc(env(safe-area-inset-top,0px) + 12px)}
-.pr-pill.corner{left:16px;bottom:16px;height:40px;font-size:14px}
-.pr-pill svg{width:14px;height:14px}
-.pr-panelwrap{position:fixed;z-index:1100;top:0;bottom:0;left:0}
-.pr-panelwrap.drawer{right:0}
-.pr-scrim{position:absolute;left:0;top:0;right:0;bottom:0;border:0;padding:0;background:rgba(0,0,0,.45);cursor:default}
-.pr-panel{position:absolute;left:0;top:0;bottom:0;width:320px;box-sizing:border-box;overflow-y:auto;padding:24px 20px 28px;background:#ffffff;color:#000000;border-right:1px solid #d6d6d6}
-.pr-panelwrap.drawer .pr-panel{width:min(360px,100%);border-right:0;padding-top:calc(env(safe-area-inset-top,0px) + 20px);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 28px)}
-.pr-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
-.pr-panel h1{margin:0;font-size:20px;font-weight:700;letter-spacing:-.01em}
-.pr-panel p{margin:6px 0 0;font-size:14px;line-height:1.45;color:#4a4a4a}
-.pr-panel h2{margin:24px 0 8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4a4a4a}
-.pr-x{flex:none;display:grid;place-items:center;width:44px;height:44px;margin:-8px -8px 0 0;padding:0;border:0;border-radius:50%;background:none;color:#000000}
-.pr-x svg{width:20px;height:20px}
-.pr-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:2px}
-.pr-item{display:flex;align-items:flex-start;gap:12px;width:100%;min-height:44px;padding:10px 10px;border:0;border-radius:10px;background:none;color:#000000;text-align:left;font-size:15px}
-.pr-item:hover{background:#f2f2f2}
-.pr-item.on{background:#ececec}
-.pr-n{flex:none;display:grid;place-items:center;width:24px;height:24px;border-radius:50%;border:1.5px solid #000000;box-sizing:border-box;font-size:12px;font-weight:700}
-.pr-item.on .pr-n{background:#000000;color:#ffffff}
-.pr-t{display:flex;flex-direction:column;gap:2px;min-width:0}
-.pr-t .pr-ti{font-size:15px;font-weight:600;color:#000000}
-.pr-t .pr-sub{font-size:13px;line-height:1.4;color:#4a4a4a}
-.pr-item.on .pr-t .pr-ti{font-weight:700}
-.pr-seg{display:flex;flex-wrap:wrap;gap:6px}
-.pr-seg button{min-height:36px;padding:0 12px;border:1px solid #000000;border-radius:999px;background:#ffffff;color:#000000;font-size:13px;font-weight:600}
-.pr-seg button[aria-pressed="true"]{background:#000000;color:#ffffff}
-.pr-tip{margin:20px 0 0;padding:12px 14px;border-radius:10px;background:#f2f2f2;font-size:14px;line-height:1.45;color:#000000}
-.pr-tip button{display:block;margin-top:10px;min-height:36px;padding:0 14px;border:0;border-radius:999px;background:#000000;color:#ffffff;font-size:13px;font-weight:600}
-.pr-actions{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}
-.pr-actions button{min-height:40px;padding:0 16px;border:1px solid #000000;border-radius:999px;background:#ffffff;color:#000000;font-size:14px;font-weight:600}
-.pr-toast{position:fixed;z-index:1200;display:flex;align-items:center;gap:10px;box-sizing:border-box;padding:10px 8px 10px 16px;border-radius:16px;background:#ffffff;color:#000000;box-shadow:0 4px 20px rgba(0,0,0,.35);font-size:14px;line-height:1.35}
-.pr-toast.top{left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 42px)}
-.pr-toast.side{left:16px;bottom:16px;max-width:calc(100vw - 32px)}
-.pr-wide .pr-toast.side,.pr-toast.side.beside{left:340px}
-.pr-toast .pr-tt{flex:1 1 auto;min-width:0}
-.pr-toast .go{flex:none;min-height:36px;padding:0 14px;border:0;border-radius:999px;background:#000000;color:#ffffff;font-size:13px;font-weight:600}
-.pr-toast .x{flex:none;display:grid;place-items:center;width:36px;height:36px;padding:0;border:0;border-radius:50%;background:none;color:#000000}
-.pr-toast .x svg{width:16px;height:16px}
 </style>
 </helmet>
 <div class="{{L.cls}}">
@@ -140,76 +94,21 @@ html.sr-lock,html.sr-lock body{overflow:hidden;height:var(--sr-vh,100%)}
 <dc-import name="SrMobile" device="{{device}}" season="{{hs}}" metal="Silver" on-continue="{{goApp}}" hint-size="390px,844px"></dc-import>
 </sc-if>
 <sc-if value="{{r.app}}" hint-placeholder-val="{{false}}">
-<dc-import name="SrApp" mode="App" wrap="{{wrap}}" share-url="{{shareUrl}}" on-gift-share="{{onShare}}" hint-size="390px,844px"></dc-import>
+<dc-import name="SrApp" mode="App" wrap="{{wrap}}" persist="{{persist}}" on-wrap-pick="{{wrapPick}}" share-url="{{shareUrl}}" hint-size="390px,844px"></dc-import>
 </sc-if>
 <sc-if value="{{r.giftco}}" hint-placeholder-val="{{false}}">
-<dc-import name="SrApp" screen="Gift checkout" wrap="{{giftWrap}}" gift-pack="5 Pack" share-url="{{shareUrl}}" on-gift-share="{{onShare}}" hint-size="390px,844px"></dc-import>
+<dc-import name="SrApp" screen="Gift checkout" wrap="{{giftWrap}}" gift-pack="5 Pack" on-wrap-pick="{{wrapPick}}" share-url="{{shareUrl}}" hint-size="390px,844px"></dc-import>
 </sc-if>
 <sc-if value="{{r.gift}}" hint-placeholder-val="{{false}}">
-<dc-import name="SrApp" screen="Gift link" wrap="{{g.wrap}}" gift-pack="{{g.pack}}" gift-lock="{{g.lock}}" gift-opens="{{g.opens}}" gift-note="{{g.note}}" share-url="{{shareUrl}}" on-gift-share="{{onShare}}" hint-size="390px,844px"></dc-import>
+<dc-import name="SrApp" screen="Gift link" wrap="{{g.wrap}}" gift-pack="{{g.pack}}" gift-lock="{{g.lock}}" gift-opens="{{g.opens}}" gift-note="{{g.note}}" share-url="{{shareUrl}}" hint-size="390px,844px"></dc-import>
 </sc-if>
 <sc-if value="{{r.card}}" hint-placeholder-val="{{false}}">
 <dc-import name="SrApp" screen="Card" self-demo="On" hint-size="390px,844px"></dc-import>
 </sc-if>
 <sc-if value="{{r.returning}}" hint-placeholder-val="{{false}}">
-<dc-import name="SrApp" portfolio="Returning" wrap="{{wrap}}" share-url="{{shareUrl}}" on-gift-share="{{onShare}}" hint-size="390px,844px"></dc-import>
+<dc-import name="SrApp" portfolio="Returning" wrap="{{wrap}}" share-url="{{shareUrl}}" hint-size="390px,844px"></dc-import>
 </sc-if>
 </div>
-</div>
-</sc-if>
-
-<sc-if value="{{ui.pill}}" hint-placeholder-val="{{false}}">
-<button type="button" class="pr-ui pr-pill {{ui.pillCls}}" aria-label="Open the prototype menu" onClick="{{openMenu}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg><span>Prototype</span></button>
-</sc-if>
-
-<sc-if value="{{ui.panel}}" hint-placeholder-val="{{false}}">
-<div class="pr-ui pr-panelwrap {{ui.panelCls}}">
-<sc-if value="{{ui.drawer}}" hint-placeholder-val="{{false}}">
-<button type="button" class="pr-scrim" aria-label="Close the menu" onClick="{{closeMenu}}"></button>
-</sc-if>
-<aside class="pr-panel" aria-label="Prototype menu">
-<div class="pr-head">
-<div>
-<h1>StockRip prototype</h1>
-<p>Tap through it like the real app. No real money moves.</p>
-</div>
-<sc-if value="{{ui.drawer}}" hint-placeholder-val="{{false}}">
-<button type="button" class="pr-x" aria-label="Close the menu" onClick="{{closeMenu}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
-</sc-if>
-</div>
-<h2>The flow</h2>
-<ol class="pr-list">
-<sc-for list="{{flow}}" as="it" hint-placeholder-count="3">
-<li><button type="button" class="pr-item {{it.cls}}" aria-current="{{it.cur}}" onClick="{{it.go}}"><span class="pr-n" aria-hidden="true">{{it.n}}</span><span class="pr-t"><b class="pr-ti">{{it.title}}</b><span class="pr-sub">{{it.sub}}</span></span></button></li>
-</sc-for>
-</ol>
-<h2>Jump to</h2>
-<ul class="pr-list">
-<sc-for list="{{more}}" as="it" hint-placeholder-count="6">
-<li><button type="button" class="pr-item {{it.cls}}" aria-current="{{it.cur}}" onClick="{{it.go}}"><span class="pr-t"><b class="pr-ti">{{it.title}}</b><span class="pr-sub">{{it.sub}}</span></span></button></li>
-</sc-for>
-</ul>
-<h2>Season</h2>
-<div class="pr-seg" role="group" aria-label="Season">
-<sc-for list="{{seasons}}" as="s" hint-placeholder-count="4">
-<button type="button" aria-pressed="{{s.pressed}}" onClick="{{s.pick}}">{{s.label}}</button>
-</sc-for>
-</div>
-<sc-if value="{{tip.on}}" hint-placeholder-val="{{true}}">
-<div class="pr-tip">{{tip.text}}<sc-if value="{{tip.act}}" hint-placeholder-val="{{false}}"><button type="button" onClick="{{tip.act}}">{{tip.actLabel}}</button></sc-if></div>
-</sc-if>
-<div class="pr-actions">
-<button type="button" onClick="{{restart}}">Restart this screen</button>
-</div>
-</aside>
-</div>
-</sc-if>
-
-<sc-if value="{{toast.on}}" hint-placeholder-val="{{false}}">
-<div class="pr-ui pr-toast {{toast.cls}}" role="status">
-<span class="pr-tt">{{toast.text}}</span>
-<button type="button" class="go" onClick="{{toast.go}}">See what they get</button>
-<button type="button" class="x" aria-label="Dismiss" onClick="{{toast.close}}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
 </div>
 </sc-if>
 
@@ -218,13 +117,15 @@ html.sr-lock,html.sr-lock body{overflow:hidden;height:var(--sr-vh,100%)}
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props='{}'>
 
-// StockRip prototype: one page that routes between the homepage, the app and the gift link.
+// StockRip demo: one page that routes between the homepage, the app and the gift link. It ships like the real thing:
+// no prototype menu. The theme follows the wrap picked in the app's gift checkout (Classic, Christmas, Lunar New Year,
+// Valentine's) and is remembered on this device.
 var SR_SEASONS = ['Classic', 'Christmas', 'Lunar New Year', 'Valentine’s'];
 var SR_MAIN_WRAP = { 'Classic': 'None', 'Christmas': 'Christmas', 'Lunar New Year': 'Lunar New Year', 'Valentine’s': 'Valentine’s' };
 var SR_HOME_SEASON = { 'Classic': 'Classic', 'Christmas': 'Christmas', 'Lunar New Year': 'Lunar New Year', 'Valentine’s': "Valentine's" };
 var SR_WRAP_KEY = { 'Christmas': 'xmas', 'Lunar New Year': 'lny', 'Valentine’s': 'val' };
-var SR_WRAP_NAME = { xmas: 'Christmas', lny: 'Lunar New Year', val: 'Valentine’s' };
-var SR_DAY = { 'Christmas': 'Christmas Day', 'Lunar New Year': 'Lunar New Year', 'Valentine\u2019s': 'Valentine\u2019s Day' };
+var SR_WRAP_NAME = { std: 'Classic', xmas: 'Christmas', lny: 'Lunar New Year', val: 'Valentine’s' };
+var SR_SEASON_OF_WRAP = { std: 'Classic', xmas: 'Christmas', lny: 'Lunar New Year', val: 'Valentine’s' };
 var SR_ROUTES = ['home', 'home-phone', 'app', 'gift', 'gift-locked', 'gift-checkout', 'card', 'returning'];
 
 function srDevice() {
@@ -309,9 +210,9 @@ class Component extends DCLogic {
       this._appH = h;
       document.documentElement.style.setProperty('--app-h', h);
     }
-    // In a phone browser the status bar sits outside the page, so the homepage starts higher (below the Prototype pill).
+    // In a phone browser the status bar sits outside the page, so the homepage starts right at the top.
     // In a home screen web app the page runs under the status bar, so the doc homepage clears it too.
-    var mt = L.mode === 'phone' ? '50px' : L.mode === 'doc' ? 'calc(env(safe-area-inset-top, 0px) + 50px)' : '';
+    var mt = L.mode === 'phone' ? '50px' : L.mode === 'doc' ? 'calc(env(safe-area-inset-top, 0px) + 12px)' : '';
     var de = document.documentElement;
     var vh = (this.state && this.state.vh) || this._vh || srViewH();
     if (vh + 'px' !== this._srVh) { this._srVh = vh + 'px'; de.style.setProperty('--sr-vh', vh + 'px'); }
@@ -368,7 +269,7 @@ class Component extends DCLogic {
       };
     }
     clearTimeout(this._mt);
-    this.setState({ route: route, gift: gift, mount: false, menu: false });
+    this.setState({ route: route, gift: gift, mount: false });
     this._mt = setTimeout(function () { self.setState({ mount: true }); }, 40);
     try { window.scrollTo(0, 0); } catch (e) { /* ignore */ }
   }
@@ -388,10 +289,10 @@ class Component extends DCLogic {
       return { mode: 'site', cls: 'pr-site', inPhone: false, wide: wide, h: 844 };
     }
     if (wide) {
-      var panelW = 320, bz = 12;
+      var bz = 12;
       var s = Math.min(1, (vh - 40) / (844 + bz * 2));
       var fw = (390 + bz * 2) * s, fh = (844 + bz * 2) * s;
-      var x = panelW + Math.max(20, (vw - panelW - fw) / 2);
+      var x = Math.max(20, (vw - fw) / 2);
       return { mode: 'wide', cls: 'pr-fixed pr-wide', inPhone: true, wide: true, s: s, h: 844, x: x, y: (vh - fh) / 2, fw: fw, fh: fh, bz: bz * s, rad: 55, frad: (55 + bz) * s };
     }
     // The mobile site scrolls, so it fills any phone. The app is laid out for a full 844pt screen (installed):
@@ -417,7 +318,7 @@ class Component extends DCLogic {
     var mount = st.mount === true;
     var season = st.season || 'Christmas';
     var wrap = SR_MAIN_WRAP[season] || 'None';
-    var seasonWrap = wrap === 'None' ? 'Christmas' : wrap;
+    var seasonWrap = wrap === 'None' ? 'Classic' : wrap;
     var gp = st.gift || {};
     var gWrap = SR_WRAP_NAME[gp.w] || seasonWrap;
     var g = {
@@ -438,87 +339,26 @@ class Component extends DCLogic {
       card: mount && route === 'card',
       returning: mount && route === 'returning'
     };
-    var item = function (id, n, title, sub, active) {
-      var on = active !== undefined ? active : route === id;
-      return { n: n, title: title, sub: sub, cls: on ? 'on' : '', cur: on ? 'page' : undefined, go: function () { self.go(id); } };
-    };
-    var sent = st.sent;
-    var friendOn = route === 'gift' || (route === 'gift-locked' && !!sent);
-    var friendGo = function () { self.go(sent ? srGiftHash(sent) : 'gift'); };
-    var flow = [
-      item('home', 1, 'Homepage', 'Someone new lands on stockrip.com', route === 'home'),
-      item('app', 2, 'The app', 'Buy a pack or gift one: sign in, add funds, pay, rip'),
-      { n: 3, title: 'Your friend opens the gift', sub: sent ? 'The gift you just sent' : 'Sign in, rip it, their first stocks', cls: friendOn ? 'on' : '', cur: friendOn ? 'page' : undefined, go: friendGo }
-    ];
-    var more = [
-      item('gift-checkout', '', 'Gift a pack', 'Straight to checkout with Gift on'),
-      item('gift-locked', '', 'A gift that opens on a date', 'Locked until ' + SR_DAY[seasonWrap], route === 'gift-locked' && !sent),
-      item('card', '', 'Card page', 'The Tesla card, self-trading coming soon'),
-      item('returning', '', 'Returning user', 'Home with cards already in it')
-    ];
-    if (L.wide) more.push(item('home-phone', '', 'Homepage on a phone', 'The mobile site in the frame'));
-    var seasons = SR_SEASONS.map(function (s) {
-      return {
-        label: s, pressed: s === season ? 'true' : 'false',
-        pick: function () {
-          try { window.localStorage.setItem('srp-season', s); } catch (e) { /* ignore */ }
-          self.setState({ season: s });
-        }
-      };
-    });
-    var phoneHome = route === 'home-phone' || (route === 'home' && (L.inPhone || L.doc));
-    var TIPS = {
-      'home': phoneHome ? 'Tap the button at the bottom, then Continue in browser to open the app.' : 'Click GET THE APP or GIFT A PACK, then Continue on this computer to open the app.',
-      'home-phone': 'Tap the button at the bottom, then Continue in browser to open the app.',
-      'app': 'Tap BUY to sign in, add funds, pay and rip. In checkout, turn on Gift a pack to send it to a friend instead.',
-      'gift-checkout': 'Pick a wrap, add a note, choose when it opens, then GET GIFT LINK.',
-      'gift': 'This is what your friend sees. They sign in, rip it, then say thanks or gift one back.',
-      'gift-locked': 'Your friend can see the gift but can’t rip it until the day it opens.',
-      'card': 'A card page. Self-trading is coming soon, so its switch stays off.',
-      'returning': 'Home for someone who already has cards.'
-    };
-    var tip = { on: !!TIPS[route], text: TIPS[route] || '', act: null, actLabel: '' };
-    if (route === 'gift-locked') {
-      tip.act = function () {
-        self.go(srGiftHash({ w: gp.w || SR_WRAP_KEY[gWrap], n: gp.n || 5, note: gp.note }));
-      };
-      tip.actLabel = 'Open it now instead';
-    }
-    var drawer = !L.wide || L.mode === 'site';
-    var ui = {
-      pill: drawer && !st.menu,
-      pillCls: L.mode === 'site' ? 'corner' : (L.x >= 140 ? 'side' : 'top'),
-      panel: !drawer || !!st.menu,
-      drawer: drawer,
-      panelCls: drawer ? 'drawer' : 'pinned'
-    };
-    var toast = {
-      on: !!st.toast,
-      cls: L.mode === 'phone' ? 'top' : L.mode === 'wide' ? 'side beside' : 'side',
-      text: st.toast === 'shared' ? 'Gift sent.' : 'Gift link copied.',
-      go: function () { self.setState({ toast: false }); friendGo(); },
-      close: function () { self.setState({ toast: false }); }
-    };
     return {
-      L: L, r: r, g: g, ui: ui, tip: tip, toast: toast,
-      flow: flow, more: more, seasons: seasons,
+      L: L, r: r, g: g,
       wrap: wrap,
       giftWrap: seasonWrap,
       hs: SR_HOME_SEASON[season] || 'Classic',
       device: L.wide ? 'iPhone Safari (iOS 27)' : (this._device || srDevice()),
+      // The app keeps its demo account (cards, balance, riplink) on this device until Sign out.
+      persist: true,
       goApp: function () { self.go('app'); },
-      openMenu: function () { self.setState({ menu: true }); },
-      closeMenu: function () { self.setState({ menu: false }); },
-      restart: function () { self.fromHash(); },
-      // The share button in the app sends a link to this prototype, so whoever opens it lands on the same gift.
+      // Picking a gift wrap switches the whole theme (app and homepage) and remembers it.
+      wrapPick: function (k) {
+        var s = SR_SEASON_OF_WRAP[k];
+        if (!s || s === (self.state || {}).season) return;
+        try { window.localStorage.setItem('srp-season', s); } catch (e) { /* ignore */ }
+        self.setState({ season: s });
+      },
+      // Share and copy send a link to this demo, so whoever opens it lands on the same gift.
       shareUrl: function (gs) {
         var base = String(window.location.href).split('#')[0];
         return base + '#' + srGiftHash({ w: gs && gs.w, n: gs && gs.n, opens: gs && gs.opens, note: gs && gs.note });
-      },
-      onShare: function (gs, how) {
-        clearTimeout(self._tt);
-        self.setState({ sent: { w: gs && gs.w, n: gs && gs.n, opens: gs && gs.opens, note: gs && gs.note }, toast: how === 'shared' ? 'shared' : 'copied' });
-        self._tt = setTimeout(function () { self.setState({ toast: false }); }, 12000);
       }
     };
   }
